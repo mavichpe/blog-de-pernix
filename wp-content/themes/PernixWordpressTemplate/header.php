@@ -23,10 +23,13 @@
         <link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url'); ?>" media="screen" />
         <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="<?php bloginfo('rss2_url'); ?>" />
         <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
-        <script src="js/application-header.js" type="text/javascript"></script>
+        <script src="/wp-content/themes/PernixWordpressTemplate/js/jquery-1.7.2.min.js" type="text/javascript"></script>
+
     </head>
-    <body>
+
+    <body >
         <div id="content-wrapper">
+
 
             <div id="header">
                 <header id="pageHeader">
@@ -49,5 +52,16 @@
                         </ul>
                     </nav>
                 </header>
+                <script>
+                    if ($(window).width() > 980){
+                        $("#pageHeader").css("left", ($(window).width()-980)/2);    
+                    }
+                    $(window).resize(function() {
+                        if ($(window).width() > 980) {
+                            $("#pageHeader").css("left", ($(window).width()-980)/2);
+                        }
+                    }
+                ); 
+
+                </script>
             </div>
-        
