@@ -1,0 +1,508 @@
+/*
+Theme Name: Pernix-Template
+Theme URI: http://blogs.pernix-solutions.com
+Description: Skin Para los blogs de pernix, adaptado a Wordpress por Marco Chacon
+Version: 1
+Author: Marco Chacon
+Author URI: http://www.pernix-solutions.com
+Tags: 
+*/
+body,div,h1,h2,p,ul,li
+{
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    margin: 0px;
+    padding: 0px;
+}
+@font-face
+{
+    font-family: Headline;
+    src: url("http://pernix-solutions.com/fonts/Headline.TTF");
+}
+@font-face
+{
+    font-family: HeadlineWideBold;
+    src: url("http://pernix-solutions.com/fonts/Headline-Wide-Bold.ttf");
+}
+@font-face
+{
+    font-family: HeadlineWide;
+    src: url("http://pernix-solutions.com/fonts/Headline-Wide-Normal.ttf");
+}
+@font-face
+{
+    font-family: Helvetica;
+    src: url("http://pernix-solutions.com/fonts/HelveticaLight.ttf");
+}
+@font-face
+{
+    font-family: HelveticaLTSdBoldCond;
+    src: url("http://pernix-solutions.com/fonts/HelveticaLTStd-BoldCond.otf");
+}
+@font-face
+{
+    font-family: HelveticaLightItalic;
+    src: url("http://pernix-solutions.com/fonts/HelveticaLightItalic.ttf");
+}
+@font-face
+{
+    font-family: HelveticaBold;
+    src: url("http://pernix-solutions.com/fonts/HelveticaLTStd-Bold.otf");
+}
+#header
+{
+    background-color: #313131;
+    box-shadow: 0px 15px 30px #3F3F3F;
+    color: white;
+    font-family: Headline, serif;
+    height: 205px;
+    position: relative;
+    width: 100%;
+    z-index: 10;
+}
+#pageHeader
+{
+    background-color: #373737;
+    border: 1px solid #313131;
+    height: 215px;
+    position: absolute;
+    width: 980px;
+    z-index: 10;
+}
+#logoPernix
+{
+    float: left;
+    margin: 15px 40px;
+}
+#telefonoLogin
+{
+    border-bottom: solid 2px #404040;
+    float: right;
+    font-size: 15px;
+    margin-right: 20px;
+    padding: 15px 0px 15px 20px;
+    text-align: right;
+    width: 720px;
+}
+#socialNet
+{
+    float: right;
+    margin: 10px 20px;
+}
+#socialNet div:last-child
+{
+    margin-right: 0px;
+}
+#socialNet div
+{
+    float: left;
+    margin-right: 20px;
+    text-align: center;
+    width: 60px;
+}
+#menuPrincipal
+{
+    background: url(http://pernix-solutions.com/images/nav-background.png) repeat-x;
+    float: left;
+    height: 60px;
+    margin: -3px 20px;
+    width: 940px;
+}
+#menuPrincipal ul
+{
+    list-style: none;
+    margin: 20px auto;
+    width: 887px;
+}
+#menuPrincipal li
+{
+    border-right: solid 2px white;
+    float: left;
+}
+#menuPrincipal li:last-child
+{
+    border-right: none;
+}
+#menuPrincipal a
+{
+    color: white;
+    font-family: Headline, serif;
+    font-size: 17px;
+    padding: 5px 20px;
+    text-decoration: none;
+}
+#submenuBusiness
+{
+    background-color: rgba(0,0,0,0.8);
+    border-radius: 7px;
+    overflow: hidden;
+    position: absolute;
+}
+#submenuBusiness ul
+{
+    margin: 0px auto;
+    width: auto;
+}
+#submenuBusiness li
+{
+    border: none;
+    border-bottom: solid white 1px;
+    float: none;
+    margin: 0px 20px;
+    overflow: hidden;
+    padding: 12px 0px;
+}
+#submenuBusiness li:last-child
+{
+    border: none;
+}
+#submenuBusiness a
+{
+    font-size: 15px;
+    margin: 10px 0px;
+    padding: 0;
+}
+#flashBackground
+{
+    background-color: #3F88C2;
+    height: 375px;
+    margin-top: -7px;
+    position: relative;
+    width: 100%;
+}
+#homeImage
+{
+    margin: 7px auto;
+    overflow: hidden;
+    width: 1000px;
+}
+#homeBodyBackground
+{
+    background: url(http://pernix-solutions.com/images/body-background.png);
+    background-color: #E8E8E8;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+#welcomePernix
+{
+    background: url(http://pernix-solutions.com/images/welcomeSection.png) repeat-x;
+    bottom: -135px;
+    box-shadow: 0px 35px 30px #C1C1C1;
+    height: 170px;
+    position: absolute;
+    width: 980px;
+    z-index: 10;
+}
+#welcomePernix h1
+{
+    font-family: HeadlineWideBold, serif;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
+#welcomePernix p
+{
+    color: #636363;
+    font-family: Helvetica, sans-serif;
+    font-size: 17px;
+    line-height: 1.5;
+    margin: 5px 0px;
+}
+#welcomeTexto
+{
+    margin: 40px 50px;
+}
+#mainInformation
+{
+    height: 665px;
+    margin: 135px auto 0px;
+    position: relative;
+    width: 980px;
+}
+#infoBoxes
+{
+    overflow: hidden;
+    padding: 50px 39px;
+}
+.infoBox
+{
+    background: url(http://pernix-solutions.com/images/infoBox.png);
+    float: left;
+    height: 200px;
+    margin-right: 19px;
+    width: 288px;
+}
+.lastInfoBox
+{
+    background: url(http://pernix-solutions.com/images/infoBox.png);
+    float: left;
+    height: 200px;
+    width: 288px;
+}
+.infoBoxTextHeader
+{
+    color: white;
+    font-family: HelveticaLTSdBoldCond, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 13px 18px;
+}
+.infoBoxText
+{
+    color: white;
+    font-family: Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 14px 18px;
+}
+#testimonials
+{
+    margin: 0px 40px;
+    overflow: hidden;
+}
+#testimonialsHeader
+{
+    color: #010101;
+    font-family: HeadlineWide, serif;
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none;
+}
+.testimonial
+{
+    float: left;
+    height: 200px;
+    margin: 35px 30px 35px 0px;
+    width: 278px;
+}
+.lastTestimonial
+{
+    float: left;
+    height: 200px;
+    margin: 35px 0px;
+    width: 278px;
+}
+.testimonialText
+{
+    color: #6B6B6B;
+    font-family: HelveticaLightItalic, sans-serif;
+    font-size: 14px;
+    height: 170px;
+    line-height: 1.5;
+}
+#openQuotation
+{
+    margin-top: -14px;
+    position: absolute;
+}
+#closeQuotation
+{
+    margin: 238px 825px;
+    position: absolute;
+}
+#footer
+{
+    background-color: #373737;
+    color: #959595;
+    height: 250px;
+    position: relative;
+    width: 100%;
+}
+#menuBar
+{
+    background-color: #313131;
+    height: 40px;
+}
+#menuFooter
+{
+    height: 40px;
+    margin: 0px auto;
+    width: 980px;
+}
+#menuFooter ul
+{
+    list-style: none;
+    margin-left: 35px;
+    overflow: hidden;
+    padding: 11px 0px;
+    width: 610px;
+}
+#menuFooter li
+{
+    border-right: solid 2px #959595;
+    float: left;
+}
+#menuFooter li:last-child
+{
+    border-right: none;
+}
+#menuFooter a
+{
+    color: #959595;
+    font-family: HelveticaBold, sans-serif;
+    font-size: 11px;
+    padding: 2px 7px;
+    text-decoration: none;
+}
+#footerLow
+{
+    margin: 0px auto;
+    width: 980px;
+}
+#slogan
+{
+    color: #959595;
+    float: left;
+    font-family: Headline, serif;
+    font-size: 22px;
+    margin: 35px 40px;
+}
+#footerLogoPernix
+{
+    float: left;
+    margin-top: 25px;
+}
+#businessCard
+{
+    background-color: #3E3E3E;
+    box-shadow: 0px 25px 25px #2E2E2E;
+    color: #959595;
+    font-family: HelveticaBold, sans-serif;
+    font-weight: bold;
+    height: 140px;
+    margin: -60px 610px;
+    position: absolute;
+    width: 330px;
+}
+#telefonos
+{
+    font-size: 14px;
+    margin: 30px 0px 0px 30px;
+}
+#email
+{
+    font-family: Headline, serif;
+    font-size: 20px;
+    margin: 20px 0px 0px 30px;
+}
+#bodyBounds
+{
+    height: 100%;
+    margin: 0px auto;
+    padding: 50px;
+    position: relative;
+    width: 980px;
+}
+.contentBox
+{
+    margin: 10px auto;
+    position: relative;
+    width: 940px;
+}
+.contentHeader
+{
+    color: #3F88C2;
+    font-family: HeadlineWideBold, serif;
+    font-size: 16px;
+    margin: 10px 0px;
+}
+.contentBody
+{
+    color: #313131;
+    font-family: Helvetica, sans-serif;
+    font-size: 13px;
+    line-height: 1.5;
+    overflow: hidden;
+    text-align: justify;
+}
+.contentBody p
+{
+    margin: 7px 0px;
+}
+.contentBody ul,ol
+{
+    color: #3F88C2;
+    font-size: 13px;
+    font-weight: bold;
+    margin: 15px 30px;
+}
+.contentBody li span
+{
+    color: #313131;
+    font-family: Helvetica, sans-serif;
+    font-size: 13px;
+    line-height: 1.5;
+}
+.contentBody a
+{
+    color: #3F88C2;
+    font-family: Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    text-decoration: none;
+}
+.contentBody td
+{
+    border-color: black;
+    border-style: solid;
+    border-width: 2px;
+    font-weight: bold;
+    padding: 10px 20px;
+}
+.contentBody img
+{
+    float: left;
+    margin-right: 10px;
+}
+.entry-title a {
+    color: #222;
+    text-decoration: none;
+}
+
+.entry-title {
+    clear: both;
+    color: #222;
+    font-size: 26px;
+    font-weight: bold;
+    line-height: 1.5em;
+    padding-bottom: .3em;
+    padding-top: 15px;
+}
+.entry-header .entry-meta {
+    padding-right: 76px;
+}
+.entry-meta {
+    color: #666;
+    clear: both;
+    font-size: 12px;
+    line-height: 18px;
+}
+
+.entry-content, .entry-summary {
+    padding: 1.625em 0 0;
+}
+
+.entry-header .comments-link a {
+    background: #EEE url(images/comment-bubble.png) no-repeat;
+    color: #666;
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 35px;
+    overflow: hidden;
+    padding: 0 0 0;
+    position: absolute;
+    top: 1.5em;
+    right: 0;
+    text-align: center;
+    text-decoration: none;
+    width: 43px;
+    height: 36px;
+}
+
+.entry-header .comments-link a:hover, .entry-header .comments-link a:focus, .entry-header .comments-link a:active {
+    background-color: #1982D1;
+    color: white;
+    color: rgba(255, 255, 255, 0.8);
+}
+
