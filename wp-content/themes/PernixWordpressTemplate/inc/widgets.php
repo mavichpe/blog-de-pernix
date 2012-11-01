@@ -5,20 +5,20 @@
  * Learn more: http://codex.wordpress.org/Widgets_API#Developing_Widgets
  *
  * @package WordPress
- * @subpackage Twenty_Eleven
- * @since Twenty Eleven 1.0
+ * @subpackage Pernix_Wordpress_Template
+ * @since Pernix Wordpress Template 1.0
  */
-class Twenty_Eleven_Ephemera_Widget extends WP_Widget {
+class Pernix_Wordpress_Template_Ephemera_Widget extends WP_Widget {
 
 	/**
 	 * Constructor
 	 *
 	 * @return void
 	 **/
-	function Twenty_Eleven_Ephemera_Widget() {
-		$widget_ops = array( 'classname' => 'widget_twentyeleven_ephemera', 'description' => __( 'Use this widget to list your recent Aside, Status, Quote, and Link posts', 'twentyeleven' ) );
-		$this->WP_Widget( 'widget_twentyeleven_ephemera', __( 'Twenty Eleven Ephemera', 'twentyeleven' ), $widget_ops );
-		$this->alt_option_name = 'widget_twentyeleven_ephemera';
+	function Pernix_Wordpress_Template_Ephemera_Widget() {
+		$widget_ops = array( 'classname' => 'widget_PernixWordpressTemplate_ephemera', 'description' => __( 'Use this widget to list your recent Aside, Status, Quote, and Link posts', 'PernixWordpressTemplate' ) );
+		$this->WP_Widget( 'widget_PernixWordpressTemplate_ephemera', __( 'Pernix Wordpress TemplateEphemera', 'PernixWordpressTemplate' ), $widget_ops );
+		$this->alt_option_name = 'widget_PernixWordpressTemplate_ephemera';
 
 		add_action( 'save_post', array(&$this, 'flush_widget_cache' ) );
 		add_action( 'deleted_post', array(&$this, 'flush_widget_cache' ) );
@@ -33,7 +33,7 @@ class Twenty_Eleven_Ephemera_Widget extends WP_Widget {
 	 * @return void Echoes it's output
 	 **/
 	function widget( $args, $instance ) {
-		$cache = wp_cache_get( 'widget_twentyeleven_ephemera', 'widget' );
+		$cache = wp_cache_get( 'widget_PernixWordpressTemplate_ephemera', 'widget' );
 
 		if ( !is_array( $cache ) )
 			$cache = array();
@@ -49,7 +49,7 @@ class Twenty_Eleven_Ephemera_Widget extends WP_Widget {
 		ob_start();
 		extract( $args, EXTR_SKIP );
 
-		$title = apply_filters( 'widget_title', empty( $instance['title'] ) ? __( 'Ephemera', 'twentyeleven' ) : $instance['title'], $instance, $this->id_base);
+		$title = apply_filters( 'widget_title', empty( $instance['title'] ) ? __( 'Ephemera', 'PernixWordpressTemplate' ) : $instance['title'], $instance, $this->id_base);
 
 		if ( ! isset( $instance['number'] ) )
 			$instance['number'] = '10';
@@ -86,9 +86,9 @@ class Twenty_Eleven_Ephemera_Widget extends WP_Widget {
 				<?php if ( 'link' != get_post_format() ) : ?>
 
 				<li class="widget-entry-title">
-					<a href="<?php echo esc_url( get_permalink() ); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'twentyeleven' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a>
+					<a href="<?php echo esc_url( get_permalink() ); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'PernixWordpressTemplate' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a>
 					<span class="comments-link">
-						<?php comments_popup_link( __( '0 <span class="reply">comments &rarr;</span>', 'twentyeleven' ), __( '1 <span class="reply">comment &rarr;</span>', 'twentyeleven' ), __( '% <span class="reply">comments &rarr;</span>', 'twentyeleven' ) ); ?>
+						<?php comments_popup_link( __( '0 <span class="reply">comments &rarr;</span>', 'PernixWordpressTemplate' ), __( '1 <span class="reply">comment &rarr;</span>', 'PernixWordpressTemplate' ), __( '% <span class="reply">comments &rarr;</span>', 'PernixWordpressTemplate' ) ); ?>
 					</span>
 				</li>
 
@@ -97,14 +97,14 @@ class Twenty_Eleven_Ephemera_Widget extends WP_Widget {
 				<li class="widget-entry-title">
 					<?php
 						// Grab first link from the post content. If none found, use the post permalink as fallback.
-						$link_url = twentyeleven_url_grabber();
+						$link_url = PernixWordpressTemplate_url_grabber();
 
 						if ( empty( $link_url ) )
 							$link_url = get_permalink();
 					?>
-					<a href="<?php echo esc_url( $link_url ); ?>" title="<?php printf( esc_attr__( 'Link to %s', 'twentyeleven' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?>&nbsp;<span>&rarr;</span></a>
+					<a href="<?php echo esc_url( $link_url ); ?>" title="<?php printf( esc_attr__( 'Link to %s', 'PernixWordpressTemplate' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?>&nbsp;<span>&rarr;</span></a>
 					<span class="comments-link">
-						<?php comments_popup_link( __( '0 <span class="reply">comments &rarr;</span>', 'twentyeleven' ), __( '1 <span class="reply">comment &rarr;</span>', 'twentyeleven' ), __( '% <span class="reply">comments &rarr;</span>', 'twentyeleven' ) ); ?>
+						<?php comments_popup_link( __( '0 <span class="reply">comments &rarr;</span>', 'PernixWordpressTemplate' ), __( '1 <span class="reply">comment &rarr;</span>', 'PernixWordpressTemplate' ), __( '% <span class="reply">comments &rarr;</span>', 'PernixWordpressTemplate' ) ); ?>
 					</span>
 				</li>
 
@@ -123,7 +123,7 @@ class Twenty_Eleven_Ephemera_Widget extends WP_Widget {
 		endif;
 
 		$cache[$args['widget_id']] = ob_get_flush();
-		wp_cache_set( 'widget_twentyeleven_ephemera', $cache, 'widget' );
+		wp_cache_set( 'widget_PernixWordpressTemplate_ephemera', $cache, 'widget' );
 	}
 
 	/**
@@ -137,14 +137,14 @@ class Twenty_Eleven_Ephemera_Widget extends WP_Widget {
 		$this->flush_widget_cache();
 
 		$alloptions = wp_cache_get( 'alloptions', 'options' );
-		if ( isset( $alloptions['widget_twentyeleven_ephemera'] ) )
-			delete_option( 'widget_twentyeleven_ephemera' );
+		if ( isset( $alloptions['widget_PernixWordpressTemplate_ephemera'] ) )
+			delete_option( 'widget_PernixWordpressTemplate_ephemera' );
 
 		return $instance;
 	}
 
 	function flush_widget_cache() {
-		wp_cache_delete( 'widget_twentyeleven_ephemera', 'widget' );
+		wp_cache_delete( 'widget_PernixWordpressTemplate_ephemera', 'widget' );
 	}
 
 	/**
@@ -154,10 +154,10 @@ class Twenty_Eleven_Ephemera_Widget extends WP_Widget {
 		$title = isset( $instance['title']) ? esc_attr( $instance['title'] ) : '';
 		$number = isset( $instance['number'] ) ? absint( $instance['number'] ) : 10;
 ?>
-			<p><label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php _e( 'Title:', 'twentyeleven' ); ?></label>
+			<p><label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php _e( 'Title:', 'PernixWordpressTemplate' ); ?></label>
 			<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" /></p>
 
-			<p><label for="<?php echo esc_attr( $this->get_field_id( 'number' ) ); ?>"><?php _e( 'Number of posts to show:', 'twentyeleven' ); ?></label>
+			<p><label for="<?php echo esc_attr( $this->get_field_id( 'number' ) ); ?>"><?php _e( 'Number of posts to show:', 'PernixWordpressTemplate' ); ?></label>
 			<input id="<?php echo esc_attr( $this->get_field_id( 'number' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'number' ) ); ?>" type="text" value="<?php echo esc_attr( $number ); ?>" size="3" /></p>
 		<?php
 	}
